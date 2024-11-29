@@ -1,10 +1,18 @@
-import Image from "next/image";
+import DessertList from "./components/DessertList";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"></main>
-      <footer className="text-sm text-center">
+    <div className="flex flex-col min-h-screen p-8 gap-16 sm:p-20 font-[family-name:var(--font-primary)]">
+      <main className="flex flex-col gap-8 row-start-2 items-start h-full">
+        <div className="title font-[family-name:var(--font-primary)] font-bold text-4xl mb-2">
+          Desserts
+        </div>
+        <div className="flex flex-col md:flex-row gap-4">
+          <DessertList></DessertList>
+          <div className="cart">Cart</div>
+        </div>
+      </main>
+      <footer className="text-xs text-center bottom-0 justify-self-end">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"
